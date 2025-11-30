@@ -1,0 +1,8 @@
+Отчет Lighthouse для сайта: yandex-market.promo.page
+Общий балл доступности: 70
+
+Основные проблемы:
+1. Buttons do not have an accessible name
+2. Image elements do not have [alt] attributes
+3. <frame> or <iframe> elements do not have a title
+4. Links do not have a discernible name

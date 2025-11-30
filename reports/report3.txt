@@ -1,0 +1,9 @@
+Отчет Lighthouse для сайта: youtube.com
+Общий балл доступности: 89
+
+Основные проблемы:
+1. Buttons do not have an accessible name
+2. Background and foreground colors do not have a sufficient contrast ratio.
+3. Touch targets do not have sufficient size or spacing.
+
+

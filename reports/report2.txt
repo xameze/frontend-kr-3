@@ -1,0 +1,13 @@
+Отчет Lighthouse для сайта: dzen.ru
+Общий балл доступности: 47
+
+Основные ошибки:
+[aria-*] attributes do not match their roles
+[aria-*] attributes do not have valid values
+These are opportunities to improve the usage of ARIA in your application which may enhance the experience for users of assistive technology, like a screen reader.
+Buttons do not have an accessible name
+Image elements do not have [alt] attributes
+<frame> or <iframe> elements do not have a title
+Links do not have a discernible name
+
+

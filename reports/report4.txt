@@ -1,0 +1,7 @@
+Отчет Lighthouse для сайта: twitch.tv
+Общий балл доступности: 94
+
+Основные проблемы:
+1. Touch targets do not have sufficient size or spacing.
+2. Heading elements are not in a sequentially-descending order
+

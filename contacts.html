@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты - Доступная страница</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <nav aria-label="Основная навигация">
+        <ul class="nav-list">
+            <li><a href="index.html" class="nav-link">Главная</a></li>
+            <li><a href="contacts.html" class="nav-link" aria-current="page">Контакты</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <header class="header">
+            <h1 class="header__title">Свяжитесь с нами</h1>
+            <p class="header__subtitle">Мы всегда рады вашим вопросам и предложениям</p>
+        </header>
+
+        
+        <section aria-labelledby="contact-info">
+            <h2 id="contact-info" class="section__title">Контактная информация</h2>
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <h3>Адрес</h3>
+                    <p>г. Москва, ул. Примерная, д. 123</p>
+                </div>
+                <div class="contact-item">
+                    <h3>Телефон</h3>
+                    <p><a href="tel:+79991234567" class="contact-link">+7 (999) 123-45-67</a></p>
+                </div>
+                <div class="contact-item">
+                    <h3>Email</h3>
+                    <p><a href="mailto:info@example.com" class="contact-link">info@example.com</a></p>
+                </div>
+                <div class="contact-item">
+                    <h3>Режим работы</h3>
+                    <p>Пн-Пт: 9:00-18:00<br>Сб-Вс: выходной</p>
+                </div>
+            </div>
+        </section>
+
+        
+        <section aria-labelledby="contact-form">
+            <h2 id="contact-form" class="section__title">Форма обратной связи</h2>
+            
+            <form class="contact-form" id="contactForm" novalidate>
+                
+                <fieldset class="form-group">
+                    <legend class="form-legend">Персональные данные</legend>
+                    
+                    <div class="form-row">
+                        <div class="form-field">
+                            <label for="firstName" class="form-label">
+                                Имя <span class="required" aria-hidden="true">*</span>
+                                <span class="sr-only">обязательное поле</span>
+                            </label>
+                            <input 
+                                type="text" 
+                                id="firstName" 
+                                name="firstName" 
+                                class="form-input"
+                                required
+                                aria-required="true"
+                                aria-describedby="firstNameHelp"
+                            >
+                            <div id="firstNameHelp" class="form-help">
+                                Введите ваше настоящее имя
+                            </div>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="lastName" class="form-label">Фамилия</label>
+                            <input 
+                                type="text" 
+                                id="lastName" 
+                                name="lastName" 
+                                class="form-input"
+                            >
+                        </div>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="email" class="form-label">
+                            Email <span class="required" aria-hidden="true">*</span>
+                            <span class="sr-only">обязательное поле</span>
+                        </label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            class="form-input"
+                            required
+                            aria-required="true"
+                            aria-describedby="emailHelp"
+                        >
+                        <div id="emailHelp" class="form-help">
+                            Мы не передаем ваш email третьим лицам
+                        </div>
+                    </div>
+                </fieldset>
+
+                
+                <fieldset class="form-group">
+                    <legend class="form-legend">Ваше сообщение</legend>
+                    
+                    <div class="form-field">
+                        <label for="subject" class="form-label">Тема сообщения</label>
+                        <input 
+                            type="text" 
+                            id="subject" 
+                            name="subject" 
+                            class="form-input"
+                        >
+                    </div>
+
+                    <div class="form-field">
+                        <label for="message" class="form-label">
+                            Сообщение <span class="required" aria-hidden="true">*</span>
+                            <span class="sr-only">обязательное поле</span>
+                        </label>
+                        <textarea 
+                            id="message" 
+                            name="message" 
+                            class="form-textarea"
+                            rows="6"
+                            required
+                            aria-required="true"
+                            aria-describedby="messageHelp"
+                        ></textarea>
+                        <div id="messageHelp" class="form-help">
+                            Опишите ваш вопрос подробно
+                        </div>
+                    </div>
+                </fieldset>
+
+                
+                <fieldset class="form-group">
+                    <legend class="form-legend">Предпочтения связи</legend>
+                    
+                    <div class="form-field">
+                        <p class="form-label">Предпочитаемый способ связи:</p>
+                        <div class="radio-group">
+                            <label class="radio-label">
+                                <input 
+                                    type="radio" 
+                                    name="contactMethod" 
+                                    value="email" 
+                                    checked
+                                    class="radio-input"
+                                >
+                                <span class="radio-custom"></span>
+                                Email
+                            </label>
+                            <label class="radio-label">
+                                <input 
+                                    type="radio" 
+                                    name="contactMethod" 
+                                    value="phone"
+                                    class="radio-input"
+                                >
+                                <span class="radio-custom"></span>
+                                Телефон
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-field">
+                        <label class="checkbox-label">
+                            <input 
+                                type="checkbox" 
+                                name="newsletter" 
+                                class="checkbox-input"
+                                aria-describedby="newsletterHelp"
+                            >
+                            <span class="checkbox-custom"></span>
+                            Подписаться на рассылку
+                        </label>
+                        <div id="newsletterHelp" class="form-help">
+                            Будем присылать не более 1 письма в неделю
+                        </div>
+                    </div>
+                </fieldset>
+
+                
+                <div class="form-actions">
+                    <button 
+                        type="submit" 
+                        class="btn btn-primary"
+                        aria-describedby="submitHelp"
+                    >
+                        Отправить сообщение
+                    </button>
+                    <button 
+                        type="reset" 
+                        class="btn btn-secondary"
+                    >
+                        Очистить форму
+                    </button>
+                </div>
+                
+                <div id="submitHelp" class="form-help">
+                    После отправки формы мы свяжемся с вами в течение 24 часов
+                </div>
+            </form>
+        </section>
+
+        
+        <div 
+            id="formMessages" 
+            class="form-messages" 
+            aria-live="polite" 
+            aria-atomic="true"
+        ></div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Наш сайт. Все права защищены.</p>
+    </footer>
+
+    <script src="contacts.js"></script>
+</body>
+</html>

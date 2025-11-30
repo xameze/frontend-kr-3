@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Адаптивные изображения - Демо</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+    <a href="index.html">Главная</a>
+    <a href="contacts.html">Контакты</a>
+</nav>
+    <div class="container">
+        <header class="header">
+            <h1 class="header__title">Адаптивные изображения</h1>
+            <p class="header__subtitle">Демонстрация современных техник</p>
+        </header>
+
+        <main class="main">
+            
+            <section class="section">
+                <h2 class="section__title">1. Базовое адаптивное изображение</h2>
+                <div class="image-container">
+                    <img src="images/landscape.jpg" alt="Красивый пейзаж" class="responsive-image">
+                </div>
+                <div class="explanation">
+                    <h3>Что происходит:</h3>
+                    <ul>
+                        <li>Изображение занимает 100% ширины контейнера</li>
+                        <li>Высота автоматически рассчитывается</li>
+                        <li>Работает на всех устройствах</li>
+                    </ul>
+                </div>
+            </section>
+
+            
+            <section class="section">
+                <h2 class="section__title">2. Picture element с форматами</h2>
+                <div class="image-container">
+                    <picture>
+                        <source srcset="images/portrait.webp" type="image/webp">
+                        <source srcset="images/portrait.jpg" type="image/jpeg">
+                        <img src="images/portrait.jpg" alt="Портрет" class="responsive-image">
+                    </picture>
+                </div>
+                <div class="explanation">
+                    <h3>Что происходит:</h3>
+                    <ul>
+                        <li>Браузер выбирает лучший формат (WebP или JPEG)</li>
+                        <li>Автоматическое переключение между форматами</li>
+                        <li>Фолбэк для старых браузеров</li>
+                    </ul>
+                </div>
+            </section>
+
+            
+            <section class="section">
+                <h2 class="section__title">3. Разные изображения для разных экранов</h2>
+                <div class="image-container">
+                    <picture>
+                        <source media="(min-width: 1200px)" srcset="images/wide-desktop.jpg">
+                        <source media="(min-width: 768px)" srcset="images/tablet.jpg">
+                        <img src="images/mobile.jpg" alt="Адаптивное изображение" class="responsive-image">
+                    </picture>
+                </div>
+                <div class="explanation">
+                    <h3>Что происходит:</h3>
+                    <ul>
+                        <li>Десктопы: wide-desktop.jpg (1200px+)</li>
+                        <li>Планшеты: tablet.jpg (768px-1199px)</li>
+                        <li>Мобильные: mobile.jpg (до 767px)</li>
+                    </ul>
+                </div>
+            </section>
+
+            
+            <section class="section">
+                <h2 class="section__title">4. Поддержка Retina дисплеев</h2>
+                <div class="image-container">
+                    <img src="images/icon@1x.png" srcset="images/icon@1x.png 1x, images/icon@2x.png 2x" alt="Иконка" class="retina-image">
+                </div>
+                <div class="explanation">
+                    <h3>Что происходит:</h3>
+                    <ul>
+                        <li>Обычные экраны: icon@1x.png</li>
+                        <li>Retina экраны: icon@2x.png</li>
+                    </ul>
+                </div>
+            </section>
+
+            
+            <section class="section">
+                <h2 class="section__title">5. Object-fit свойства</h2>
+                <div class="object-fit-demo">
+                    <div class="object-fit-item">
+                        <img src="images/square.jpg" alt="Cover" class="object-fit-cover">
+                        <span>object-fit: cover</span>
+                    </div>
+                    <div class="object-fit-item">
+                        <img src="images/square.jpg" alt="Contain" class="object-fit-contain">
+                        <span>object-fit: contain</span>
+                    </div>
+                    <div class="object-fit-item">
+                        <img src="images/square.jpg" alt="Fill" class="object-fit-fill">
+                        <span>object-fit: fill</span>
+                    </div>
+                </div>
+                <div class="explanation">
+                    <h3>Что происходит:</h3>
+                    <ul>
+                        <li><strong>cover</strong> - заполняет с обрезкой</li>
+                        <li><strong>contain</strong> - вписывает полностью</li>
+                        <li><strong>fill</strong> - растягивает</li>
+                    </ul>
+                </div>
+            </section>
+
+            
+            <section class="section">
+                <h2 class="section__title">6. Адаптивная галерея</h2>
+                <div class="gallery">
+                    <div class="gallery__item"><img src="images/gallery1.jpg" alt="Галерея 1" class="gallery__image" loading="lazy"></div>
+                    <div class="gallery__item"><img src="images/gallery2.jpg" alt="Галерея 2" class="gallery__image" loading="lazy"></div>
+                    <div class="gallery__item"><img src="images/gallery3.jpg" alt="Галерея 3" class="gallery__image" loading="lazy"></div>
+                    <div class="gallery__item"><img src="images/gallery4.jpg" alt="Галерея 4" class="gallery__image" loading="lazy"></div>
+                </div>
+                <div class="explanation">
+                    <h3>Что происходит:</h3>
+                    <ul>
+                        <li><strong>Десктопы:</strong> 4 изображения в ряд</li>
+                        <li><strong>Планшеты:</strong> 2 изображения в ряд</li>
+                        <li><strong>Мобильные:</strong> 1 изображение в ряд</li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>Измените размер окна браузера чтобы увидеть адаптивность!</p>
+        </footer>
+    </div>
+</body>
+</html>
